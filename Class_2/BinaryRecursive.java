@@ -1,11 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
-
 public class BinaryRecursive {
-  
     public static int binarySearch(int[] arr, int target, int left, int right) {
-
-        // Base case: element not found
         if (left > right) {
             return -1;
         }
@@ -13,7 +9,6 @@ public class BinaryRecursive {
         if (arr[mid] == target) {
             return mid;
         }
-        // Search right half
         else if (arr[mid] < target) {
             return binarySearch(arr, target, mid + 1, right);
         }
@@ -31,7 +26,7 @@ public class BinaryRecursive {
         for (int i = 0; i < n; i++) {
             arr[i] = in.nextInt();
         }
-        // Binary search requires sorted array
+    
         Arrays.sort(arr);
         System.out.println("Sorted array: " + Arrays.toString(arr));
         System.out.print("Enter target element: ");
