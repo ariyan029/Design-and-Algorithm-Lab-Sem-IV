@@ -1,40 +1,40 @@
-import java.util.Arrays;                 // Time: O(1) 
-import java.util.Scanner;                // Time: O(1) 
+import java.util.Arrays;                 //  O(1) 
+import java.util.Scanner;                //  O(1) 
 
-public class BinarySearch {              // Time: O(1) 
+public class BinarySearch {              // O(1) 
 
     public static int binarySearch(int[] arr, int target) {
-        int left = 0;                    // Time: O(1) 
-        int right = arr.length - 1;      // Time: O(1)
+        int left = 0;                    //  O(1) 
+        int right = arr.length - 1;      //  O(1)
 
-        while (left <= right) {          // Time: O(log n) 
-            int mid = left + (right - left) / 2; // Time: O(1)
-            if (arr[mid] == target) {    // Time: O(1)
-                return mid;              // Time: O(1)
-            } else if (arr[mid] < target) { // Time: O(1) 
-                left = mid + 1;          // Time: O(1) 
+        while (left <= right) {          //  O(log n) 
+            int mid = left + (right - left) / 2; //  O(1)
+            if (arr[mid] == target) {    //  O(1)
+                return mid;              //  O(1)
+            } else if (arr[mid] < target) { //  O(1)
+                left = mid + 1;          //  O(1)
             } else {
-                right = mid - 1;         // Time: O(1) 
+                right = mid - 1;         //  O(1)
             }
         }
-        return -1;                       // Time: O(1) 
+        return -1;                       //  O(1)
     }
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in); // Time: O(1) 
-        int[] arr = new int[5];              // Time: O(1) 
-        System.out.println("Enter 5 elements:"); // Time: O(1) 
-        for (int i = 0; i < arr.length; i++) { // Time: O(n) 
-            arr[i] = in.nextInt();             // Time: O(1) 
+        Scanner in = new Scanner(System.in); //  O(1) 
+        int[] arr = new int[5];              //  O(1) 
+        System.out.println("Enter 5 elements:"); //  O(1) 
+        for (int i = 0; i < arr.length; i++) { //  O(n) 
+            arr[i] = in.nextInt();             //  O(1) 
         }
-        Arrays.sort(arr);                       // Time: O(n log n) 
-        System.out.println("Sorted Array: " + Arrays.toString(arr)); // Time: O(n) 
-        System.out.print("Enter the target element to search: "); // Time: O(1) 
-        int target = in.nextInt();                                 // Time: O(1) 
-        int result = binarySearch(arr, target); // Time: O(log n) 
-        if (result != -1) {                     // Time: O(1) 
-            System.out.println("Element found at index: " + result); // Time: O(1) 
+        Arrays.sort(arr);                       //  O(n log n) 
+        System.out.println("Sorted Array: " + Arrays.toString(arr)); //  O(n) 
+        System.out.print("Enter the target element to search: "); //  O(1) 
+        int target = in.nextInt();                                 //  O(1) 
+        int result = binarySearch(arr, target); //  O(log n) 
+        if (result != -1) {                     //  O(1) 
+            System.out.println("Element found at index: " + result); //  O(1) 
         } else {
-            System.out.println("Element not found in the array.");   // Time: O(1) 
+            System.out.println("Element not found in the array.");   //  O(1) 
         }
 
         /*
