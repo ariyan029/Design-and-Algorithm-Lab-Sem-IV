@@ -1,14 +1,12 @@
-import java.util.Scanner;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class BubbleSort {
-
     public static void bubbleSort(int[] arr) {
         int n = arr.length;                   // O(1)
         for (int i = 0; i < n - 1; i++) {    // Outer loop: O(n)
             for (int j = 0; j < n - i - 1; j++) { // Inner loop: O(n) → total O(n^2)
                 if (arr[j] > arr[j + 1]) {   // O(1)
-                    // Swap arr[j] and arr[j+1]
                     int temp = arr[j];       // O(1)
                     arr[j] = arr[j + 1];    // O(1)
                     arr[j + 1] = temp;      // O(1)
@@ -16,7 +14,6 @@ public class BubbleSort {
             }
         }
     }
-
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);  // O(1)
         System.out.print("Enter number of elements: "); // O(1)
@@ -26,11 +23,9 @@ public class BubbleSort {
         for (int i = 0; i < n; i++) {        // O(n)
             arr[i] = in.nextInt();           // O(1) each → O(n)
         }
-
         bubbleSort(arr);                      // O(n^2)
         System.out.println("Sorted array: " + Arrays.toString(arr)); // O(n)
     }
-
     // ------------------- Complexity (short) -------------------
     /*
      * Bubble Sort:
