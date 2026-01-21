@@ -12,7 +12,6 @@ public class BinaryRecursive {
         else if (arr[mid] < target) {
             return binarySearch(arr, target, mid + 1, right);
         }
-        
         else {
             return binarySearch(arr, target, left, mid - 1);
         }
@@ -26,7 +25,6 @@ public class BinaryRecursive {
         for (int i = 0; i < n; i++) {
             arr[i] = in.nextInt();
         }
-    
         Arrays.sort(arr);
         System.out.println("Sorted array: " + Arrays.toString(arr));
         System.out.print("Enter target element: ");
