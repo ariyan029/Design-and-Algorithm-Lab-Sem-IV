@@ -1,6 +1,5 @@
 import java.util.Arrays;
 import java.util.Scanner;
-
 public class BubbleSort {
     public static void bubbleSort(int[] arr) {
         int n = arr.length;                   // O(1)
