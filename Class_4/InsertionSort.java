@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 public class InsertionSort {
     public static void main(String[] args) {
-        System.out.println("====Insertion Sort====");   // O(1)
+        System.out.println("====Insertion Sort===="); // O(1)
         int[] arr = new int[5];                         // O(1)
         Scanner in = new Scanner(System.in);            // O(1)
         System.out.println("Enter the elements of the array:"); // O(1)
@@ -35,13 +35,12 @@ public class InsertionSort {
      *
      * T(n) = O(n²)
      */
-
     // ------------------- Complexity (short) -------------------
     /*
      * Insertion Sort:
-     *   Best Case: O(n)        (already sorted array)
+     *   Best Case: O(n) (already sorted array)
      *   Average Case: O(n²)
-     *   Worst Case: O(n²)      (reverse sorted array)
+     *   Worst Case: O(n²) (reverse sorted array)
      *   Space Complexity: O(1)
      */
 }
